@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+article, h1, nav, section, ul, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F2F2F2;
+  text-align: center;
+  padding: 41px 29px 31px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.mainHeader {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 auto;
+}
+
+.mainHeader::after {
+  display: block;
+  content: "";
+  width: 650px;
+  height: 2px;
+  margin: 37px auto 0;
+  background-color: #BDBDBD;
+}
+
+.navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #828282;
+  margin: 28px auto;
+}
+
+.navList li {
+  cursor: pointer;
+}
+
+.navList .selected {
+  font-weight: 900;
+  color: black;
+}
+
+section {
+  background-color: white;
+  border: 2px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.movieList {
+  padding: 26px 27px;
+}
+
+.movieList li {
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+  border-radius: 10px;
+}
+
+.movieList li .movieImg {
+  width: 180px;
+  border: 1px solid #BDBDBD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+.movieList li .title {
+  display: block;
+  color: black;
+  font-weight: 900;
+  line-height: 23px;
+}
+
+.movieList li .movieDef {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.movieList li .movieDef dt {
+  display: inline-block;
+  color: #828282;
+  margin-right: 5px;
+}
+
+.movieList li .movieDef dd {
+  display: inline-block;
+  vertical-align: bottom;
+  color: black;
+}
+
+.movieList li .movieDef .rate {
+  position: relative;
+}
+
+.movieList li .movieDef .rate::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -15px;
+  width: 14px;
+  height: 14px;
+  background-image: url(./public/icon/별점이미지.png);
+  background-repeat: no-repeat;
+}
+
+.movieList li .icon {
+  width: 16px;
+  height: 16px;
+}
+/*# sourceMappingURL=style.css.map */

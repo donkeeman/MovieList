@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$gray3: #828282;
+$gray4: #BDBDBD;
+$gray5: #F2F2F2;
+
+article, h1, nav, section, ul, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+ul{
+    li{
+        list-style: none;
+    }
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $gray5;
+    text-align: center;
+    padding: 41px 29px 31px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.mainHeader{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 auto;
+
+    &::after{
+        display: block;
+        content: "";
+        width: 650px;
+        height: 2px;
+        margin: 37px auto 0;
+        background-color: $gray4;
+    }
+}
+
+.navList{
+    display: flex;
+    justify-content: space-around;
+    color: $gray3;
+    margin: 28px auto;
+    li{
+        cursor: pointer;
+    }
+    .selected{
+        font-weight: 900;
+        color: black;
+    }
+}
+
+section{
+    background-color: white;
+    border: 2px solid $gray4;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.movieList{
+    padding: 26px 27px;
+    li{
+        border: 1px solid $gray4;
+        box-sizing: border-box;
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+        border-radius: 10px;
+        .movieImg{
+            width: 180px;
+            border: 1px solid $gray4;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 10px;
+        }
+        .title{
+            display: block;
+            color: black;
+            font-weight: 900;
+            line-height: 23px;
+        }
+        .movieDef{
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 19px;
+            dt{
+                display: inline-block;
+                color: $gray3;
+                margin-right: 5px;
+            }
+            dd{
+                display: inline-block;
+                vertical-align: bottom;
+                color: black;
+            }
+            .rate{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: -15px;
+                    width: 14px;
+                    height: 14px;
+                    background : {
+                        image: url(./public/icon/별점이미지.png);
+                        repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        .icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
