@@ -52,6 +52,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 0;
   margin: 28px auto;
 }
 .navList li {
@@ -166,8 +167,9 @@ body {
 .buttonContainer {
   display: flex;
   justify-content: space-between;
-  background-color: #BDBDBD;
+  align-items: center;
   gap: 1px;
+  background-color: #BDBDBD;
 }
 
 .bookButton, .bookButton:hover, .bookButton:focus, .bookButton:active, .playButton, .playButton:hover, .playButton:focus, .playButton:active {

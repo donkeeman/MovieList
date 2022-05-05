@@ -3,10 +3,11 @@
 
 $gray: #828282 #BDBDBD #F2F2F2;
 
-@mixin flex($hor:center, $ver:center){
+@mixin flex($hor:center, $ver:center, $gap:0){
     display: flex;
     justify-content: $hor;
     align-items: $ver;
+    gap: $gap;
 }
 
 @mixin grid($col, $width:auto, $gap:0){
@@ -198,10 +199,8 @@ body{
 }
 
 .buttonContainer{
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between, $gap: 1px);
     background-color: nth($gray, 2);
-    gap: 1px;
 }
 
 .bookButton, .playButton{
@@ -217,7 +216,6 @@ body{
         line-height: 20px;
         padding: 9px 26px;
         cursor: pointer;
-        
     }
     img{
         vertical-align: -2px;
